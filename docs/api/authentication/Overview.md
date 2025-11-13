@@ -14,7 +14,7 @@ OpenChampPS's' authentication system uses **HTTP and WebSocket** endpoints:
 
 | Protocol      | Use Case                                        | Registration | Login | Token Auth | Logout |
 | :---------    | :------------------------------------------     | :----------- | :---- | :--------- | :----- |
-| **HTTP**      | Initial registration only (no auto-login)       | ✓            | ✗     | ✗          | ✗      |
+| **HTTP**      | Initial registration only                       | ✓            | ✗     | ✗          | ✗      |
 | **WebSocket** | Authentication + session management             | ✓            | ✓     | ✓          | ✓      |
 
 ### Authentication Methods
@@ -33,18 +33,20 @@ OpenChampPS currently supports three authentication methods all using WebSocket:
 
 #### **User Registration**
 
-| Scenario | Endpoint | Auto-Login |
-| :------- | :------- | :--------- |
-| Web application with separate login flow | `POST /register` | No|
-| Real-time application (game client) | `WS: register` | Yes|
+| Endpoint         | Auto-Login |
+| :-------         | :--------- |
+| `POST /register` | No         |
+| `WS: register`   | Yes        |
 
 #### **User Authentication**
 
-| Endpoint | Input | Recommended usage |
-| :------- | :---- | :------- |
-| `WS: login` | username + password | Initial authentication |
-| `WS: token_auth` | token (UUID) | Session restoration|
-| `WS: register` | username + password + email | Registration|
+| Endpoint         | Input                        | Recommended usage |
+| :-------         | :----                        | :------- |
+| `WS: login`      | username + password          | Initial authentication |
+| `WS: token_auth` | token (UUID)                 | Session restoration|
+| `WS: register`   | username + password + email* | Registration|
+
+**Email is toggleable via env varible (see guide)* 
 
 #### **User Logout**
 

@@ -34,6 +34,21 @@ theme:
     - navigation.footer
     - navigation.instant
     - navigation.instant.prefetch
+  palette:
+
+    # Palette toggle for Light mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 extra_css:
   - css/custom.css
 plugins:
