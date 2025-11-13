@@ -1,0 +1,68 @@
+site_name: OpenChamp Docs
+
+nav:
+  - Home: https://openchamp.github.io/
+  - OpenChampPS: 
+      - Authentication: 
+        - Overview: api/Overview.md
+        - User-Register[HTTPS]: api/authentication/User-Register.md
+        - User-Register[WS]: api/authentication/User-Register-ws.md
+        - User-Login[WS]: api/authentication/User-Login.md
+        - Token-Refresh(Unimplemented): api/authentication/Token-Refresh.md
+        - Login-w/Token[WS]: api/authentication/Login-w-Token.md
+        - Logout[WS]: api/authentication/Logout.md
+      - User-Account:
+        - Set-Username[WS]: api/user-account/Set-Username.md
+        - Password-Reset(Unimplemented): api/user-account/Password-Reset.md
+      - Chat: 
+        - Global-Chat[WS]: api/chat/Global-Chat.md
+        - Private-Chat[WS]: api/chat/Private-Chat.md
+      - Matchmaking:
+        - Queue-Join[WS]: api/matchmaking/Queue-Join.md
+        - Queue-Leave-[WS]: api/matchmaking/Queue-Leave.md
+      - Other:
+        - Player-Count[WS]: api/other/Player-Count.md
+        - Health[HTTPS]: api/other/Health.md
+  - About: about.md
+repo_url: https://github.com/orgs/OpenChamp/repositories
+theme:
+  logo: assets/logo.png
+  name: material
+  features:
+    - navigation.tooltip 
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+extra_css:
+  - css/custom.css
+plugins:
+  - search
+  - mermaid2
+  - tags
+  - macros:
+      module_name: main
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/f6DGjvTWYT
+      name: OpenChamp on Discord
+    - icon: fontawesome/brands/mastodon
+      link: https://mastodon.social/@OpenChamp
+      name: OpenChamp on mastodon
+    - icon: fontawesome/brands/github
+      link: https://github.com/OpenChamp
+      name: OpenChamp on github
+
+
