@@ -43,5 +43,5 @@ if [[ "$1" == "--build" ]]; then
 else
     echo "Running 'mkdocs serve'... (Press Ctrl+C to stop)"
     # The --dev-addr flag makes the server accessible on your network
-    mkdocs gh-deploy --dev-addr 0.0.0.0:8000
+    mkdocs gh-deploy
 fi
