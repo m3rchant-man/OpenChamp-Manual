@@ -101,7 +101,7 @@ This example demonstrates authenticating a user with username and password.
 
     **WebSocket Connection**
     ```javascript
-    const wss = new WebSocket('wss://<your-server-address>/ws');
+    const ws = new WebSocket('ws://<your-server-address>/ws');
     ```
 
     **Request Message**

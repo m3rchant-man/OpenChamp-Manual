@@ -87,7 +87,7 @@ This example demonstrates updating a user's display username after authenticatio
 
     **WebSocket Connection**
     ```javascript
-    const wss = new WebSocket('wss://<your-server-address>/ws');
+    const wss = new WebSocket('ws://<your-server-address>/ws');
     ```
 
     **Request Message**

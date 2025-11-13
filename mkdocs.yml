@@ -6,15 +6,15 @@ nav:
       - Guide: api/Guide.md
       - Authentication: 
         - Overview: api/authentication/Overview.md
-        - User-Register[HTTPS]: api/authentication/User-Register.md
+        - User-Register[HTTP]: api/authentication/User-Register.md
         - User-Register[WS]: api/authentication/User-Register-ws.md
         - User-Login[WS]: api/authentication/User-Login.md
-        - Token-Refresh(Unimplemented): api/authentication/Token-Refresh.md
+#        - Token-Refresh(Unimplemented): api/authentication/Token-Refresh.md
         - Login-w/Token[WS]: api/authentication/Login-w-Token.md
         - Logout[WS]: api/authentication/Logout.md
       - User-Account:
         - Set-Username[WS]: api/user-account/Set-Username.md
-        - Password-Reset(Unimplemented): api/user-account/Password-Reset.md
+#        - Password-Reset(Unimplemented): api/user-account/Password-Reset.md
       - Chat: 
         - Global-Chat[WS]: api/chat/Global-Chat.md
         - Private-Chat[WS]: api/chat/Private-Chat.md
@@ -23,7 +23,7 @@ nav:
         - Queue-Leave-[WS]: api/matchmaking/Queue-Leave.md
       - Other:
         - Player-Count[WS]: api/other/Player-Count.md
-        - Health[HTTPS]: api/other/Health.md
+        - Health[HTTP]: api/other/Health.md
   - About: https://open-champ.com/  
 repo_url: https://github.com/orgs/OpenChamp/repositories
 theme:

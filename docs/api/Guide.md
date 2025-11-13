@@ -30,7 +30,7 @@ git clone https://github.com/OpenChamp/openchampPS.git
    - For development use:
 
    ```bash
-   go run .
+   go run main.go
    ```
 
 ## Configuration

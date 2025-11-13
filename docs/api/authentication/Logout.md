@@ -75,7 +75,7 @@ This example demonstrates logging out a user by clearing their client-side authe
 
     **WebSocket Connection**
     ```javascript
-    const wss = new WebSocket('wss://<your-server-address>/ws');
+    const ws = new WebSocket('ws://<your-server-address>/ws');
     ```
 
     **Request Message**
