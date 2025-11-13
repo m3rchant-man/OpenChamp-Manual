@@ -1,0 +1,33 @@
+/* Basic styling for all badges */
+.test-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Green for passing */
+.test-badge.passing {
+    background-color: #28a745; /* A nice green */
+}
+
+/* Red for failing */
+.test-badge.failing {
+    background-color: #dc3545; /* A nice red */
+}
+
+/* Grey for unknown */
+.test-badge.unknown {
+    background-color: #6c757d; /* A neutral grey */
+}
+
+/* Hover effect */
+.test-badge:hover {
+    color: #fff;
+    opacity: 0.85;
+}
