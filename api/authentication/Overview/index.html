@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../User-Register/" rel="prev"/>
-<link href="../User-Login/" rel="next"/>
+<link href="../../Guide/" rel="prev"/>
+<link href="../User-Register/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
-<title>User-Register[WS] - OpenChamp Docs</title>
+<title>Overview - OpenChamp Docs</title>
 <link href="../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#request">
+<a class="md-skip" href="#authentication-architecture">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              User-Register[WS]
+              Overview
             
           </span>
 </div>
@@ -161,31 +161,17 @@
             Authentication
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Overview/">
-<span class="md-ellipsis">
-    Overview
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../User-Register/">
-<span class="md-ellipsis">
-    User-Register[HTTPS]
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    User-Register[WS]
+    Overview
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    User-Register[WS]
+    Overview
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -195,31 +181,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#request">
+<a class="md-nav__link" href="#authentication-architecture">
 <span class="md-ellipsis">
-      Request
+      Authentication Architecture
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#input-schema">
-<span class="md-ellipsis">
-      Input Schema
-    </span>
-</a>
-<nav aria-label="Input Schema" class="md-nav">
+<nav aria-label="Authentication Architecture" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#message-structure">
+<a class="md-nav__link" href="#transport-protocols">
 <span class="md-ellipsis">
-      Message Structure
+      Transport Protocols
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payload-fields">
+<a class="md-nav__link" href="#authentication-methods">
 <span class="md-ellipsis">
-      Payload Fields
+      Authentication Methods
     </span>
 </a>
 </li>
@@ -227,24 +206,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#output-schema">
+<a class="md-nav__link" href="#endpoint-quick-reference">
 <span class="md-ellipsis">
-      Output Schema
+      Endpoint Quick Reference
     </span>
 </a>
-<nav aria-label="Output Schema" class="md-nav">
+<nav aria-label="Endpoint Quick Reference" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#response-message-register_success">
+<a class="md-nav__link" href="#user-registration">
 <span class="md-ellipsis">
-      Response Message (register_success)
+      User Registration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payload-fields_1">
+<a class="md-nav__link" href="#user-authentication">
 <span class="md-ellipsis">
-      Payload Fields
+      User Authentication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-logout">
+<span class="md-ellipsis">
+      User Logout
     </span>
 </a>
 </li>
@@ -252,17 +238,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#error-responses">
+<a class="md-nav__link" href="#authentication-sequence">
 <span class="md-ellipsis">
-      Error Responses
-    </span>
-</a>
-<nav aria-label="Error Responses" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#error-codes">
-<span class="md-ellipsis">
-      Error Codes
+      Authentication Sequence
     </span>
 </a>
 </li>
@@ -270,21 +248,18 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sequence-diagram">
+<a class="md-nav__link" href="../User-Register/">
 <span class="md-ellipsis">
-      Sequence Diagram
-    </span>
+    User-Register[HTTPS]
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example">
+<a class="md-nav__link" href="../User-Register-ws/">
 <span class="md-ellipsis">
-      Example
-    </span>
+    User-Register[WS]
+  </span>
 </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../User-Login/">
@@ -466,31 +441,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#request">
+<a class="md-nav__link" href="#authentication-architecture">
 <span class="md-ellipsis">
-      Request
+      Authentication Architecture
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#input-schema">
-<span class="md-ellipsis">
-      Input Schema
-    </span>
-</a>
-<nav aria-label="Input Schema" class="md-nav">
+<nav aria-label="Authentication Architecture" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#message-structure">
+<a class="md-nav__link" href="#transport-protocols">
 <span class="md-ellipsis">
-      Message Structure
+      Transport Protocols
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payload-fields">
+<a class="md-nav__link" href="#authentication-methods">
 <span class="md-ellipsis">
-      Payload Fields
+      Authentication Methods
     </span>
 </a>
 </li>
@@ -498,24 +466,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#output-schema">
+<a class="md-nav__link" href="#endpoint-quick-reference">
 <span class="md-ellipsis">
-      Output Schema
+      Endpoint Quick Reference
     </span>
 </a>
-<nav aria-label="Output Schema" class="md-nav">
+<nav aria-label="Endpoint Quick Reference" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#response-message-register_success">
+<a class="md-nav__link" href="#user-registration">
 <span class="md-ellipsis">
-      Response Message (register_success)
+      User Registration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payload-fields_1">
+<a class="md-nav__link" href="#user-authentication">
 <span class="md-ellipsis">
-      Payload Fields
+      User Authentication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-logout">
+<span class="md-ellipsis">
+      User Logout
     </span>
 </a>
 </li>
@@ -523,34 +498,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#error-responses">
+<a class="md-nav__link" href="#authentication-sequence">
 <span class="md-ellipsis">
-      Error Responses
-    </span>
-</a>
-<nav aria-label="Error Responses" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#error-codes">
-<span class="md-ellipsis">
-      Error Codes
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sequence-diagram">
-<span class="md-ellipsis">
-      Sequence Diagram
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example">
-<span class="md-ellipsis">
-      Example
+      Authentication Sequence
     </span>
 </a>
 </li>
@@ -563,290 +513,185 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <span class="md-tag">Authentication-Endpoints</span>
+<span class="md-tag">Overview</span>
 </nav>
-<h1>User-Register[WS]</h1>
-<p>This endpoint registers a new user account with username, password, and optional email via WebSocket connection to an OpenChampPS instance. <strong>Upon successful registration, the user is automatically authenticated and receives an auth token.</strong></p>
-<h3 id="request">Request</h3>
-<p><code>WebSocket Endpoint: /ws</code></p>
-<p><strong>Message Type:</strong> <code>register</code></p>
-<hr/>
-<h3 id="input-schema">Input Schema</h3>
-<h4 id="message-structure">Message Structure</h4>
+<h1>Overview</h1>
+<p>This section describes the authentication system for OpenChampPS holisticly. Reading the releated technical detailing is recomended. </p>
+<h2 id="authentication-architecture">Authentication Architecture</h2>
+<p>OpenChampPS's' authentication system uses <strong>HTTP and WebSocket</strong> endpoints:</p>
+<h3 id="transport-protocols">Transport Protocols</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Protocol</th>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Registration</th>
+<th style="text-align: left;">Login</th>
+<th style="text-align: left;">Token Auth</th>
+<th style="text-align: left;">Logout</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>type</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Must be <code>register</code> for registration.</td>
-<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><strong>HTTP</strong></td>
+<td style="text-align: left;">Initial registration only (no auto-login)</td>
+<td style="text-align: left;">✓</td>
+<td style="text-align: left;">✗</td>
+<td style="text-align: left;">✗</td>
+<td style="text-align: left;">✗</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>payload</code></td>
-<td style="text-align: left;">Object</td>
-<td style="text-align: left;">Contains the registration credentials.</td>
-<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><strong>WebSocket</strong></td>
+<td style="text-align: left;">Authentication + session management</td>
+<td style="text-align: left;">✓</td>
+<td style="text-align: left;">✓</td>
+<td style="text-align: left;">✓</td>
+<td style="text-align: left;">✓</td>
 </tr>
 </tbody>
 </table>
-<h4 id="payload-fields">Payload Fields</h4>
+<h3 id="authentication-methods">Authentication Methods</h3>
+<p>OpenChampPS currently supports three authentication methods all using WebSocket:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Required</th>
-<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>username</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The desired unique username.</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Minimum 3 characters</td>
+<td style="text-align: left;"><strong>Username/Password Login</strong></td>
+<td style="text-align: left;">For accessing a token on a new session</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>password</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The user's password.</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">Minimum 6 characters</td>
+<td style="text-align: left;"><strong>Token-Based Authentication</strong></td>
+<td style="text-align: left;">For maintaining or reviving a session</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>email</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The user's email address.</td>
+<td style="text-align: left;"><strong>Registration login</strong></td>
+<td style="text-align: left;">One time for fluid access to auth</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="endpoint-quick-reference">Endpoint Quick Reference</h2>
+<h4 id="user-registration"><strong>User Registration</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Endpoint</th>
+<th style="text-align: left;">Auto-Login</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Web application with separate login flow</td>
+<td style="text-align: left;"><code>POST /register</code></td>
 <td style="text-align: left;">No</td>
-<td style="text-align: left;">Must be unique if provided and email validation is enabled</td>
+</tr>
+<tr>
+<td style="text-align: left;">Real-time application (game client)</td>
+<td style="text-align: left;"><code>WS: register</code></td>
+<td style="text-align: left;">Yes</td>
 </tr>
 </tbody>
 </table>
-<hr/>
-<h3 id="output-schema">Output Schema</h3>
-<h4 id="response-message-register_success">Response Message (<code>register_success</code>)</h4>
+<h4 id="user-authentication"><strong>User Authentication</strong></h4>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Endpoint</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Recommended usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>type</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Will be <code>register_success</code> for successful registration.</td>
+<td style="text-align: left;"><code>WS: login</code></td>
+<td style="text-align: left;">username + password</td>
+<td style="text-align: left;">Initial authentication</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>payload</code></td>
-<td style="text-align: left;">Object</td>
-<td style="text-align: left;">Contains registration and authentication details.</td>
+<td style="text-align: left;"><code>WS: token_auth</code></td>
+<td style="text-align: left;">token (UUID)</td>
+<td style="text-align: left;">Session restoration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WS: register</code></td>
+<td style="text-align: left;">username + password + email</td>
+<td style="text-align: left;">Registration</td>
 </tr>
 </tbody>
 </table>
-<h4 id="payload-fields_1">Payload Fields</h4>
+<h4 id="user-logout"><strong>User Logout</strong></h4>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Endpoint</th>
+<th style="text-align: left;">Effect</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>success</code></td>
-<td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">Will be <code>true</code> for successful registration.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>message</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Will be "Registration successful".</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>autoLogin</code></td>
-<td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">Indicates if user was auto-authenticated.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>username</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The registered username (if autoLogin is true).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>token</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Authentication token for subsequent requests (if autoLogin is true).</td>
+<td style="text-align: left;"><code>WS: logout</code></td>
+<td style="text-align: left;">Clears client authentication state</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h3 id="error-responses">Error Responses</h3>
-<h4 id="error-codes">Error Codes</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Message Type</th>
-<th style="text-align: left;">Error Code/Message</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Invalid registration format</code></td>
-<td style="text-align: left;">The registration message payload is malformed.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Username must be at least 3 characters</code></td>
-<td style="text-align: left;">Username is too short.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Password must be at least 6 characters</code></td>
-<td style="text-align: left;">Password is too short.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Username already exists</code></td>
-<td style="text-align: left;">The username is already taken.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Email already registered</code></td>
-<td style="text-align: left;">The email is already in use (when email validation is enabled).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error</code></td>
-<td style="text-align: left;"><code>Registration failed due to a server error</code></td>
-<td style="text-align: left;">An internal server error occurred.</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="sequence-diagram">Sequence Diagram</h3>
+<h2 id="authentication-sequence">Authentication Sequence</h2>
 <pre class="mermaid"><code>sequenceDiagram
     participant C as Client
     participant S as OpenChampPS
     participant D as Database
 
-    C-&gt;&gt;S: 1. Registration Request (Send Credentials)
+    Note over C,D: Registration (HTTP Example)
+    C-&gt;&gt;S: POST /register (username, password, email)
     activate S
+    S-&gt;&gt;S: Validate &amp; hash password
+    S-&gt;&gt;D: Insert user record
+    D--&gt;&gt;S: User created
+    S--&gt;&gt;C: 201 Created
+    deactivate S
 
-    S-&gt;&gt;S: Verify format (Syntactic Check)
+    Note over C,D: Authentication
+    C-&gt;&gt;S: WS: login (username, password)
+    activate S
+    S-&gt;&gt;D: Query user credentials
+    D--&gt;&gt;S: Return password hash
+    S-&gt;&gt;S: Verify password
+    S-&gt;&gt;S: Generate auth token
+    S-&gt;&gt;D: Store token
+    D--&gt;&gt;S: Token stored
+    S--&gt;&gt;C: auth_success (username, token)
+    deactivate S
 
-    alt Registration Format Invalid
-        S--&gt;&gt;C: 2. "error" Invalid registration format
-    else Registration Format Valid
-        S-&gt;&gt;S: Validate username length (≥3 chars)
+    Note over C,S: Client stores token for future use
 
-        alt Username Too Short
-            S--&gt;&gt;C: 2. "error" Username must be at least 3 characters
-        else Username Valid Length
-            S-&gt;&gt;S: Validate password length (≥6 chars)
+    Note over C,D: Active Session
+    C-&gt;&gt;S: Application requests...
+    S--&gt;&gt;C: Application responses...
 
-            alt Password Too Short
-                S--&gt;&gt;C: 2. "error" Password must be at least 6 characters
-            else Password Valid Length
-                S-&gt;&gt;D: 2. Check if username exists
-                activate D
-                D--&gt;&gt;S: 3. Return existence result
-                deactivate D
+    Note over C,D: Logout
+    C-&gt;&gt;S: WS: logout
+    activate S
+    S-&gt;&gt;S: Clear client auth state
+    S--&gt;&gt;C: logged_out
+    deactivate S
 
-                alt Username Already Exists
-                    S--&gt;&gt;C: 4. "error" Username already exists
-                else Username Available
-                    S-&gt;&gt;D: 4. Check if email exists (if validation enabled)
-                    activate D
-                    D--&gt;&gt;S: 5. Return existence result
-                    deactivate D
-
-                    alt Email Already Registered
-                        S--&gt;&gt;C: 6. "error" Email already registered
-                    else Email Available/Not Checked
-                        S-&gt;&gt;S: Hash password (bcrypt)
-                        S-&gt;&gt;D: 6. Insert new user record
-                        activate D
-                        D--&gt;&gt;S: 7. Return user ID
-                        deactivate D
-
-                        S-&gt;&gt;S: Generate auth token
-                        S-&gt;&gt;D: 8. Store auth token
-                        activate D
-                        D--&gt;&gt;S: 9. Token stored
-                        deactivate D
-
-                        S-&gt;&gt;S: Set client authenticated state
-                        S--&gt;&gt;C: 10. "register_success" with token
-                    end
-                end
-            end
-        end
-    end
+    Note over C,D: Reconnection (using saved token)
+    C-&gt;&gt;S: WS: token_auth (saved token)
+    activate S
+    S-&gt;&gt;D: Query token validity
+    D--&gt;&gt;S: Token data &amp; username
+    S-&gt;&gt;S: Verify token expiration
+    S-&gt;&gt;D: Update token last_used_at
+    D--&gt;&gt;S: Updated
+    S--&gt;&gt;C: auth_success (username, token)
     deactivate S
 </code></pre>
-<hr/>
-<h3 id="example">Example</h3>
-<p>This example demonstrates registering a new user account.</p>
-<div class="admonition example">
-<p class="admonition-title">User Registration via WebSocket</p>
-<p><strong>WebSocket Connection</strong>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">wss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">'wss://&lt;your-server-address&gt;/ws'</span><span class="p">);</span>
-</code></pre></div></p>
-<p><strong>Request Message</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"register"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.smith"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mySecurePass456"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.smith@example.com"</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response Message (register_success with auto-login)</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"register_success"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registration successful"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"autoLogin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.smith"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000..."</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Error Response (username already exists)</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Username already exists"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REGISTRATION_ERROR"</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Error Response (password too short)</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password must be at least 6 characters"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REGISTRATION_ERROR"</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -854,7 +699,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: User-Register[HTTPS]" class="md-footer__link md-footer__link--prev" href="../User-Register/">
+<a aria-label="Previous: Guide" class="md-footer__link md-footer__link--prev" href="../../Guide/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -863,17 +708,17 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                User-Register[HTTPS]
+                Guide
               </div>
 </div>
 </a>
-<a aria-label="Next: User-Login[WS]" class="md-footer__link md-footer__link--next" href="../User-Login/">
+<a aria-label="Next: User-Register[HTTPS]" class="md-footer__link md-footer__link--next" href="../User-Register/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                User-Login[WS]
+                User-Register[HTTPS]
               </div>
 </div>
 <div class="md-footer__button md-icon">
