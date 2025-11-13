@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../User-Register-ws/" rel="prev"/>
-<link href="../Token-Refresh/" rel="next"/>
+<link href="../Login-w-Token/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
 <title>User-Login[WS] - OpenChamp Docs</title>
@@ -182,7 +182,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../User-Register/">
 <span class="md-ellipsis">
-    User-Register[HTTPS]
+    User-Register[HTTP]
   </span>
 </a>
 </li>
@@ -305,13 +305,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Token-Refresh/">
-<span class="md-ellipsis">
-    Token-Refresh(Unimplemented)
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../Login-w-Token/">
 <span class="md-ellipsis">
     Login-w/Token[WS]
@@ -346,13 +339,6 @@
 <a class="md-nav__link" href="../../user-account/Set-Username/">
 <span class="md-ellipsis">
     Set-Username[WS]
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../user-account/Password-Reset/">
-<span class="md-ellipsis">
-    Password-Reset(Unimplemented)
   </span>
 </a>
 </li>
@@ -445,7 +431,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../other/Health/">
 <span class="md-ellipsis">
-    Health[HTTPS]
+    Health[HTTP]
   </span>
 </a>
 </li>
@@ -741,7 +727,7 @@
 <div class="admonition example">
 <p class="admonition-title">User Login via WebSocket</p>
 <p><strong>WebSocket Connection</strong>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">wss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">'wss://&lt;your-server-address&gt;/ws'</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">'ws://&lt;your-server-address&gt;/ws'</span><span class="p">);</span>
 </code></pre></div></p>
 <p><strong>Request Message</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -790,13 +776,13 @@
               </div>
 </div>
 </a>
-<a aria-label="Next: Token-Refresh(Unimplemented)" class="md-footer__link md-footer__link--next" href="../Token-Refresh/">
+<a aria-label="Next: Login-w/Token[WS]" class="md-footer__link md-footer__link--next" href="../Login-w-Token/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Token-Refresh(Unimplemented)
+                Login-w/Token[WS]
               </div>
 </div>
 <div class="md-footer__button md-icon">
