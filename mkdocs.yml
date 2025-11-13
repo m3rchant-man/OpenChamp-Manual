@@ -3,8 +3,9 @@ site_name: OpenChamp Docs
 nav:
   - Home: https://openchamp.github.io/
   - OpenChampPS: 
+      - Guide: api/Guide.md
       - Authentication: 
-        - Overview: api/Overview.md
+        - Overview: api/authentication/Overview.md
         - User-Register[HTTPS]: api/authentication/User-Register.md
         - User-Register[WS]: api/authentication/User-Register-ws.md
         - User-Login[WS]: api/authentication/User-Login.md
