@@ -1,7 +1,7 @@
 site_name: OpenChamp Docs
 
 nav:
-  - Home: https://openchamp.github.io/
+  - Home: index.md
   - OpenChampPS: 
       - Guide: api/Guide.md
       - Authentication: 
@@ -24,7 +24,7 @@ nav:
       - Other:
         - Player-Count[WS]: api/other/Player-Count.md
         - Health[HTTPS]: api/other/Health.md
-  - About: about.md
+  - About: https://open-champ.com/  
 repo_url: https://github.com/orgs/OpenChamp/repositories
 theme:
   logo: assets/logo.png

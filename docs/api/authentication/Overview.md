@@ -4,11 +4,11 @@ tags:
   - Overview
 ---
 
-This section describes the authentication system for OpenChampPS holisticly. Reading the releated technical detailing is recomended. 
+This section describes the authentication system for OpenChampPS holistically. Reading the related technical specifications is recomended. 
 
 ## Authentication Architecture
 
-OpenChampPS's' authentication system uses **HTTP and WebSocket** endpoints:
+OpenChampPS's authentication system uses **HTTP and WebSocket** endpoints:
 
 ### Transport Protocols
 
